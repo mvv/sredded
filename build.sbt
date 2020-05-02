@@ -78,7 +78,7 @@ lazy val generic = (project in file("generic"))
     },
     libraryDependencies ++=
       Seq(
-        "org.scala-lang" % "scala-reflect" % scalaVersion.value,
+        "org.scala-lang" % "scala-reflect" % scalaVersion.value % Provided,
         specs2 % Test
       ),
     libraryDependencies ++= {
