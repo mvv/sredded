@@ -5,7 +5,7 @@ import xerial.sbt.Sonatype._
 inThisBuild(
   Seq(
     organization := "com.github.mvv.sredded",
-    version := "0.1-SNAPSHOT", // next is M2
+    version := "0.1-M2", // next is M3
     homepage := Some(url("https://github.com/mvv/sredded")),
     scmInfo := Some(ScmInfo(url("https://github.com/mvv/sredded"), "scm:git@github.com:mvv/sredded.git")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
@@ -47,7 +47,7 @@ def isPriorTo2_13(version: String): Boolean =
     case _                => false
   }
 
-lazy val specs2 = "org.specs2" %% "specs2-core" % "4.9.3"
+lazy val specs2 = "org.specs2" %% "specs2-core" % "4.9.4"
 
 lazy val sredded = (project in file("."))
   .settings(
@@ -62,7 +62,7 @@ lazy val core = (project in file("core"))
   .settings(
     name := "sredded",
     description := "Structured data representations",
-    libraryDependencies ++= Seq(specs2)
+    libraryDependencies += specs2 % Test
   )
 
 lazy val generic = (project in file("generic"))
