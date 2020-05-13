@@ -22,7 +22,7 @@ include
 Add Sredded to your dependencies
 
 ```scala
-libraryDependencies += "com.github.mvv.sredded" %% "sredded" % "0.1-M1"
+libraryDependencies += "com.github.mvv.sredded" %% "sredded" % "0.1-M2"
 ```
 
 ## Submodules
